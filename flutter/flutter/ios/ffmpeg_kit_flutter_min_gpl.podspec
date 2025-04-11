@@ -39,8 +39,8 @@ Pod::Spec.new do |s|
     ss.source_files         = 'Classes/**/*'
     ss.public_header_files  = 'Classes/**/*.h'
     # ss.dependency 'ffmpeg-kit-ios-min-gpl', "6.0"
-    # ss.ios.vendored_frameworks = 'Frameworks/TencentLBS.framework'
-    ss.vendored_frameworks = 'ffmpegkit.framework'
+    # ss.vendored_frameworks = 'ffmpegkit.framework'
+    ss.vendored_frameworks = 'Frameworks/ffmpegkit.xcframework', 'Frameworks/libavdevice.xcframework', 'Frameworks/libavcodec.xcframework', 'Frameworks/libavfilter.xcframework', 'Frameworks/libavformat.xcframework', 'Frameworks/libavutil.xcframework', 'Frameworks/libswresample.xcframework', 'Frameworks/libswscale.xcframework'
     ss.xcconfig = { 'OTHER_LDFLAGS' => '-framework ffmpegkit' }
     ss.ios.deployment_target = '12.1'
   end
