@@ -35,11 +35,13 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'min-gpl' do |ss|
+    ss.preserve_paths = 'ffmpegkit.framework'
     ss.source_files         = 'Classes/**/*'
     ss.public_header_files  = 'Classes/**/*.h'
     # ss.dependency 'ffmpeg-kit-ios-min-gpl', "6.0"
     # ss.ios.vendored_frameworks = 'Frameworks/TencentLBS.framework'
     ss.vendored_frameworks = 'ffmpegkit.framework'
+    ss.xcconfig = { 'OTHER_LDFLAGS' => '-framework ffmpegkit' }
     ss.ios.deployment_target = '12.1'
   end
 
