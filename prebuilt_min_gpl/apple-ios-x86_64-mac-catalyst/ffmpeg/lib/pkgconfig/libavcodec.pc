@@ -1,0 +1,14 @@
+prefix=/Users/ilazutin/Documents/work/mobile/flutter_packages/ffmpeg-kit/prebuilt/apple-ios-x86_64-mac-catalyst/ffmpeg
+exec_prefix=${prefix}
+libdir=/Users/ilazutin/Documents/work/mobile/flutter_packages/ffmpeg-kit/prebuilt/apple-ios-x86_64-mac-catalyst/ffmpeg/lib
+includedir=/Users/ilazutin/Documents/work/mobile/flutter_packages/ffmpeg-kit/prebuilt/apple-ios-x86_64-mac-catalyst/ffmpeg/include
+
+Name: libavcodec
+Description: FFmpeg codec library
+Version: 60.3.100
+Requires: 
+Requires.private: libswresample >= 4.10.100, libavutil >= 58.2.100
+Conflicts:
+Libs: -L${libdir}  -lavcodec 
+Libs.private: -lm -framework AudioToolbox -pthread -L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/lib -lz -framework VideoToolbox -framework CoreFoundation -framework CoreMedia -framework CoreVideo
+Cflags: -I${includedir}
